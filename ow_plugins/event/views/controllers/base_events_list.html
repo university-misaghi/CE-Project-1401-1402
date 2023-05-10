@@ -1,0 +1,23 @@
+
+<div class="clearfix">{add_content key='event.add_content.list.top' listType=$listType}</div>
+
+{if empty($noButton)}<div class="ow_right">{decorator name='button' class='ow_ic_add add_event_button' langLabel='event+add_new_button_label'}</div>{/if}
+{if !empty($contentMenu)}{$contentMenu}{/if}
+
+{add_content key='event.content.list.after_menu' listType=$listType}
+
+<div class="ow_event_list clearfix">
+    <div class="ow_automargin ow_superwide">
+      {if !empty($no_events) }
+        <div class="ow_nocontent">{text key="event+no_events_label"}</div>
+      {else}
+          {foreach from=$events key='key' item='event'}
+                {decorator name='ipc' addClass='ow_smallmargin' data=$event infoString="<a href=\"`$event.eventUrl`\">`$event.title`</a>"}
+          {/foreach}
+          <br />
+          {$paging}
+      {/if}
+    </div>
+</div>
+
+<div class="clearfix">{add_content key='event.add_content.list.bottom' listType=$listType}</div>

@@ -1,0 +1,35 @@
+<div class="owm_forum_page owm_forum_search_result_page_topic">
+    <div class="owm_std_margin_bottom">
+        <div class="owm_nav_cap owm_nav_cap_left_cont owm_nav_cap_right_cont owm_bg_color_3 owm_border clearfix">
+            {if !empty($closeUrl)}
+                <div class="owm_float_right">
+                    <a class="owm_nav_cap_right owm_ic_close_cont" href="{$closeUrl}"></a>
+                </div>
+            {/if}        
+            <div class="owm_float_left">
+                <a class="owm_nav_cap_left" href="{$backUrl}"></a>
+            </div>
+            <h3>{text key='forum+search_results'}</h3>
+        </div>
+        {if !empty($topics)}
+            <div id="forum-topics-wrapper">
+                {include file="./search_result_topic_ajax.html"}
+            </div>
+            <div class="owm_preloader owm_std_margin_bottom" id="forum_preloader" style="display:none;"></div>
+            {script}
+                // pagination
+                $(document).ready(function () 
+                {
+                    var mobilePagination = new ForumPagination({
+                        "paginateUrl" : "{$location}",
+                        "paginateWrapper" : $("#forum-topics-wrapper"),
+                        "preloader" : $("#forum_preloader"),
+                        "unitCssClass" : ""                        
+                    });
+                });
+            {/script}
+        {else}
+            <div class="owm_anno owm_info owm_std_margin_top">{text key='forum+no_posts_found'}</div>
+        {/if}
+    </div>
+</div>

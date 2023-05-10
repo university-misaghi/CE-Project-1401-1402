@@ -1,0 +1,15 @@
+<tr rel="{$slide.dto->id}">
+<td class="slides_tbl_cell ow_alt{cycle values='2,1'}">
+    <div class="ow_right ow_tiny ow_slider_actions ow_txtright">
+        <a href="javascript://" class="ow_lbutton action_edit_slide" rel="{$slide.dto->id}">{text key='base+edit'}</a>
+        <a href="javascript://" class="ow_lbutton ow_red action_delete_slide" rel="{$slide.dto->id}">{text key='base+delete'}</a>
+    </div>
+    <div class="ow_left ow_slider_settings_image_preview"><img src="{$slide.imageUrl}" /></div>
+    <div class="ow_right ow_slider_settings_image_desc">
+        {if $slide.dto->label}<p>{$slide.dto->label}</p>{/if}
+        {if $slide.dto->url}
+            <div class="ow_small"><a class="ow_remark" href="{$slide.dto->url}" target="_blank">{$slide.dto->url}</a></div>
+        {/if}
+    </div>
+</td>
+</tr>

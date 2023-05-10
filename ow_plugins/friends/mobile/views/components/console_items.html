@@ -1,0 +1,20 @@
+{foreach from=$items item='item' key='reqId'}
+<li class="owm_sidebar_msg_item{if !$item.viewed} owm_sidebar_msg_item_new{/if} clearfix" data-reqid="{$reqId}">
+    <div class="owm_sidebar_msg_avatar">
+        {decorator name='avatar_item' data=$item.avatar}
+    </div>
+    <div class="owm_sidebar_msg_control">
+        <a href="javascript://" class="owm_lbutton owm_friend_request_accept" data-rid="{$item.userId}">
+            <span class="owm_lbutton_ico"><span>{text key='friends+accept_request'}</span></span>
+        </a>
+        <a href="javascript://" class="owm_lbutton owm_friend_request_ignore" data-rid="{$item.userId}">
+            <span class="owm_lbutton_ico"><span>{text key='friends+ignore_request'}</span></span>
+        </a>
+    </div>
+    <div class="owm_sidebar_msg_info">
+        <div class="owm_sidebar_msg_string">
+            {$item.string}
+        </div>
+    </div>
+</li>
+{/foreach}

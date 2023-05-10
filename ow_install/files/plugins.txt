@@ -1,0 +1,7 @@
+newsfeed:auto
+mailbox:auto
+notifications:auto
+slideshow:auto
+photo:auto
+video:auto
+friends:auto

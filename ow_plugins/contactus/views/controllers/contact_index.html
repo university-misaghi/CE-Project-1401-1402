@@ -1,0 +1,41 @@
+{style}
+{literal}
+table.ow_table_1 td.ow_label
+{
+    width: 35%;
+}
+{/literal}
+{/style}
+{form name='contact_form'}
+<table class="ow_table_1 ow_form ow_automargin" style="width: 500px;">
+    <tr class="ow_alt1 ow_tr_first">
+		<td class="ow_label">{label name='to'}</td>
+		<td class="ow_value">{input name='to'}{error name='to'}</td>
+	</tr>
+    <tr class="ow_alt2">
+		<td class="ow_label">{label name='from'}</td>
+		<td class="ow_value">{input name='from'}{error name='from'}</td>
+	</tr>
+    <tr class="ow_alt1">
+		<td class="ow_label">{label name='subject'}</td>
+		<td class="ow_value">{input name='subject'}{error name='subject'}</td>
+	</tr>
+{if isset($captcha_present)}
+    <tr class="ow_alt2">
+{else}
+    <tr class="ow_alt2  ow_tr_last">
+{/if}
+		<td class="ow_label">{label name='message'}</td>
+		<td class="ow_value">{input name='message'}{error name='message'}</td>
+	</tr>
+{if isset($captcha_present)}
+    <tr class="ow_alt1 ow_tr_last">
+		<td class="ow_label">{label name='captcha'}</td>
+		<td class="ow_value ow_center">{input name='captcha'}{error name='captcha'}</td>
+	</tr>
+{/if}
+</table>
+<div class="clearfix ow_stdmargin ow_automargin" style="width: 500px;"><div class="ow_right">
+{submit name='send' class='ow_button ow_ic_mail'}
+</div></div>
+{/form}

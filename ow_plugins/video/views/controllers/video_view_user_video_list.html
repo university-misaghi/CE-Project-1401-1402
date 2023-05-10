@@ -1,0 +1,11 @@
+<div class="clearfix">{add_content key='video.add_content.list.top' listType='user'}</div>
+
+<div class="ow_video_infobar ow_alt2">
+    <span class="ow_txt_value">{$total}</span> {text key='video+video_by'} {user_link id=$userId name=$userName}
+</div>
+
+{add_content key='video.content.list.after_menu' listType='user'}
+
+{component class='VIDEO_CMP_VideoList' type='' count=5 tag='' userId=$userId}
+
+{add_content key='video.content.list.bottom' listType='user'}

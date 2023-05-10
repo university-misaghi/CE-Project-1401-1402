@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prefix name="contactus" label="Contact Us" language_tag="en" language_label="English">
+    <key name="seo_meta_contactus_label"><value>Contact Page</value></key>
+    <key name="meta_title_contactus"><value>Contacts | {$site_name}</value></key>
+    <key name="meta_desc_contactus"><value>Contact us if you have any questions regarding {$site_name} website.</value></key>
+    <key name="meta_keywords_contactus"><value></value></key>
+</prefix>

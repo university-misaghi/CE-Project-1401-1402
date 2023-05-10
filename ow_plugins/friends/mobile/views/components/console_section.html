@@ -1,0 +1,15 @@
+<div class="owm_sidebar_msg_block owm_friend_request_block">
+    <div class="owm_sidebar_msg_block_cap" id="friend-requests-cap"><h3>{text key='friends+console_requests_title'}</h3></div>
+    <div class="owm_sidebar_msg_block_cont">
+        <ul class="owm_sidebar_msg_list" id="friend-requests-list">
+            {$itemsCmp}
+        </ul>
+        {if $loadMore}
+        <ul class="owm_sidebar_msg_list">
+        <li class="owm_sidebar_msg_item owm_sidebar_msg_load_more">
+            <a href="javascript://" id="friends-load-more" class="owm_sidebar_load_more"></a>
+        </li>
+        </ul>
+        {/if}
+    </div>
+</div>

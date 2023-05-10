@@ -1,0 +1,58 @@
+{style}{literal}
+
+.ow_group_brief_info .image
+{
+    width: 100px;
+    margin-right: -100px;
+}
+
+.ow_group_brief_info .image img
+{
+    width: 100px;
+}
+
+.ow_group_brief_info .details
+{
+    padding-left: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ow_group_brief_info .details .controls
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+{/literal}{/style}
+
+{block_decorator name="box" type="empty" toolbar=$toolbar}
+<div class="ow_group_brief_info clearfix ow_smallmargin">
+    {if $group.imgUrl}
+        <div class="image ow_left">
+            <a href="{$group.url}"><img src="{$group.imgUrl}" alt="{$group.title|escape}" /></a>
+        </div>
+        <div class="details" style="margin-left: 100px;">
+    {else}
+        <div class="details">
+    {/if}
+
+        <h3 class="title">
+            <a href="{$group.url}">{$group.title}</a>{if $group.status == "approval"} <span class="ow_small ow_remark">({text key="base+pending_approval"})</span>{/if}
+        </h3>
+
+        <div class="body ow_smallmargin">
+            {$group.description|autolink}
+        </div>
+        <div class="clearfix">
+                {add_content key='socialsharing.get_sharing_buttons' title=$group.title url=$group.url description=$group.description image=$group.imgUrl entityType='groups' entityId=$group.id}
+        </div>
+    </div>
+
+</div>
+<div class="clearfix">
+    {add_content key='groups.brief_info.content.after_group_description'}
+</div>
+
+{/block_decorator}

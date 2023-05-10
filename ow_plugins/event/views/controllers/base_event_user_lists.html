@@ -1,0 +1,11 @@
+{if !empty($authErrorText)}
+    <div class="ow_anno ow_center">
+        {$authErrorText}
+    </div>
+{else}
+    {add_content key='event.content.user_list.top' eventId=$eventId}
+
+    {$users}
+    
+    {add_content key='event.content.user_list.bottom' eventId=$eventId}
+{/if}

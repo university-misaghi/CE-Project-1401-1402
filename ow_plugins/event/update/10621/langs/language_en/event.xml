@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prefix name="event" label="Event" language_tag="en" language_label="English">
+    <key name="seo_meta_section"><value>Events</value></key>
+    <key name="seo_meta_events_list_label"><value>Events List Page</value></key>
+    <key name="meta_title_events_list"><value>{$event_list} events | {$site_name}</value></key>
+    <key name="meta_desc_events_list"><value>Find out more information about all {$event_list} events at {$site_name}, leave your comments, and discuss them with other site members.</value></key>
+    <key name="meta_keywords_events_list"><value></value></key>
+    <key name="created_events_page_title"><value>Created</value></key>
+    <key name="joined_events_page_title"><value>Joined</value></key>
+    <key name="seo_meta_event_view_label"><value>Separate Event Page</value></key>
+    <key name="meta_title_event_view"><value>{$event_title} | {$site_name}</value></key>
+    <key name="meta_desc_event_view"><value>{$event_description}</value></key>
+    <key name="meta_keywords_event_view"><value></value></key>
+    <key name="seo_meta_event_users_label"><value>Separate Event Participants Page</value></key>
+    <key name="meta_title_event_users"><value>All users of "{$event_title}" | {$site_name}</value></key>
+    <key name="meta_desc_event_users"><value>The list of all {$site_name} users who singed up for the "{$event_title}". Join in to not miss all the fun!</value></key>
+    <key name="meta_keywords_event_users"><value></value></key>
+</prefix>

@@ -1,0 +1,17 @@
+<div class="owm_forum_page">
+    {component class="FORUM_MCMP_ForumSearch"}
+    {component class="FORUM_MCMP_ForumSection"}
+
+    {if $addTopic}
+        {script}
+            {if $canEdit}
+                // show the topic form
+                OWM.ajaxFloatBox("FORUM_MCMP_ForumAddTopic", [], {
+                    "title" : "{text key='forum+create_new_topic'}"
+                });
+            {elseif $promotion.status == 'promoted'}
+                OWM.error('{$promotion.msg|escape:quotes}');
+            {/if}
+        {/script}
+    {/if}
+</div>
